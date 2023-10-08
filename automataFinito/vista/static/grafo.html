@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <link rel="stylesheet" href='{% static "CSS/estiloGrafo.css" %}'>
+    </header>
+    <body onload="historialEspacio(),mensajeVoz(),encenderGrafo()">
+        <label for="lenguaje" id="eleccionLeng">elija el idioma:</label>
+        <select name="lenguaje" id="lenguaje">
+            <option value="Espaniol">Espa&ntildeol</option>
+            <option value="English">English</option>
+        </select>
+        <button type="button" id="botonIdioma" onclick="interfazIdioma()">Ok</button>
+        <section id="grafo">
+            <span class="circulo" id="q0">q0</span>             
+            <span class="linea" id="l1">
+                <span class="letra" id="let1">a</span>
+            </span>
+            <span class="flecha" id="f1"></span>
+            <span class="circulo" id="q1">q1</span>
+            <span class="linea" id="l2">
+                <span class="letra" id="let2">a</span>
+            </span>
+            
+            <span class="flecha" id="f2"></span>
+            <span class="circulo" id="q2">q2</span>
+            <span class="linea" id="l3">
+                <span class="letra" id="let3">a</span>
+            </span>
+            <span class="flecha" id="f3"></span>
+            <span class="circulo" id="q3">q3</span>
+            <span class="linea" id="l4">
+                <span class="letra" id="let4">a</span>
+            </span>
+            <span class="flecha" id="f4"></span>
+            <span class="circulo" id="q4">q4</span>
+            <span class="linea" id="l5">
+                <span class="letra" id="let5">b</span>
+            </span>
+            <span class="flecha" id="f5"></span>
+            <span class="circulo" id="q5">q5</span>
+            <span class="linea" id="l6">
+                <span class="letra" id="let6">a</span>
+            </span>
+            <span class="flecha" id="f6"></span>
+            <span class="circulo" id="q6">q6 </span>
+            <span class="linea" id="l7">
+                <span class="letra" id="let7">b</span>
+            </span>
+            <span class="linea" id="l15"></span>
+            <span class="linea" id="l16"></span>
+            <span class="circulo" id="q9">q9</span>
+            <span class="flecha" id="f7"></span>
+            <span class="linea" id="l8">
+                <span class="letra" id="let8">b</span>
+            </span>
+            <span class="flecha" id="f8"></span>
+            <br>
+            <span class="linea" id="l9">
+                <span class="letra" id="let9">a</span>
+            </span>
+            <span class="flecha" id="f9"></span>
+            <span class="linea" id="l10">
+                <span class="letra" id="let10">a</span>
+            </span>
+            <span class="flecha" id="f10"></span>
+            <span class="linea" id="l11">
+                <span class="letra" id="let11">b</span>
+            </span>
+            <span class="flecha" id="f11"></span>
+            <span class="circulo" id="q7">q7</span>
+            <span class="linea" id="l12">
+                <span class="letra" id="let12">a</span>
+            </span>
+            <span class="flecha" id="f12"></span>
+            <span class="circulo" id="q8">q8</span>
+            <span class="linea" id="l13">
+                <span class="letra" id="let13">b</span>
+            </span>
+            <span class="flecha" id="f13"></span>
+            <span class="linea" id="l14"></span>
+            <span class="flecha" id="f14"></span>     
+        </section>
+        
+
+        <section id="insercion">
+            <form method="post" action="{% url 'construirAutomata' %}" id="evaluador" >
+                {% csrf_token %}
+                <input type="text" name="palabra" id="palabra" placeholder="Ingrese una palabra...">
+                <button id="validacion" type="submit" onclick="interfazIdioma()">Evaluar</button>
+            </form>
+            {% if resultado %}
+                <ul>
+                    <li id="mensajeAutomata">{{ resultado }}</li>
+                </ul>
+            {% endif %}
+            <br>
+
+
+            <form method="post" action="{% url 'historial' %}" id="evaluador" >
+                {% csrf_token %}
+                <button type="submit" id="botonHistorial" onclick="interfazIdioma()">Mostrar historial</button>
+            </form>
+            <br>
+            {% if historial %}
+                <table id="historial">
+                    <thead>
+                        <tr>
+                            <th id="tablaPalabra">Palabra ingresada</th>
+                            <th id="tablaEstado">"Estado de la palabra"</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for h in historial %}
+                        <tr>
+                            <td>{{ h.palabrasIngresadas }}</td>
+                            <td class="estadoPalabra">{{ h.estadoDelaPalabra }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p id="sinHistorial"> "No hay palabras en el historial."</p>
+            {% endif %}
+        </section>
+        
+        <section>
+            
+        </section>
+    <script src='{% static "JS/grafo.js"%}'></script>   
+    <script src='{% static "JS/recorridoGrafo.js"%}'></script>   
+    </body>
+</html>

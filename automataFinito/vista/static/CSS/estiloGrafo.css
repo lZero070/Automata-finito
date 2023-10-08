@@ -1,0 +1,362 @@
+#grafo {
+    text-align: center;
+    line-height: 7cm;
+    margin: 10%;
+}
+.circulo {
+    background: white;
+    border-radius: 50%;
+    border: 1mm black solid;
+    border-width: 1mm;
+    padding: 4mm;
+}
+#q1 {
+    vertical-align: text-bottom;
+    margin-left: 9mm;
+}
+#q2 {
+    vertical-align: text-top;
+    margin-left: -15mm;
+}
+#q3 {
+    vertical-align: text-bottom;
+    margin-left: 22mm;
+}
+#q4 {
+    vertical-align: text-top;
+    margin-left: -14mm;
+}
+#q5 {
+    vertical-align: text-bottom;
+    margin-left: 22mm;
+}
+#q6 {
+    vertical-align: text-bottom;
+    margin-left: 22mm;
+}
+#q7 {
+    margin-left: -10mm;
+}
+#q8 {
+    padding-right: 4mm;
+    padding-left: 4mm;
+    margin-left: -54mm;
+    outline: 1mm black solid;
+    outline-offset: 2mm;
+}
+#q9 {
+    padding-right: 4mm;
+    padding-left: 4mm;
+    margin-right: -50mm;
+    outline: 1mm black solid;
+    outline-offset: 2mm;
+}
+.flecha {
+    position: absolute;
+    width: 3mm;
+    height: 3mm;
+    margin: 1mm;
+    border-top: solid 1mm black;
+    border-right: solid 1mm black;
+}
+.linea {
+    position: absolute;
+    border-top: solid 1mm black;
+}
+#l1 {
+    width: 27mm;
+    margin-left: -11mm;
+    margin-top: 51mm;
+    transform: rotate(307deg);
+}
+#f1 {
+    margin-top: 40mm;
+    margin-left: 8mm;
+    transform: rotate(364deg);
+}
+#l2 {
+    width: 24mm;
+    margin-left: -2mm;
+    margin-top: 34mm;
+    transform: rotate(180deg);
+}
+#f2 {
+    margin-top: 33mm;
+    margin-left: 18mm;
+    transform: rotate(45deg);
+}
+#l3 {
+    width: 25mm;
+    margin-left: 35mm;
+    margin-top: 34mm;
+    transform: rotate(180deg);
+}
+#f3 {
+    margin-top: 33mm;
+    margin-left: 56mm;
+    transform: rotate(45deg);
+}
+#l4 {
+    width: 24mm;
+    margin-left: 36mm;
+    margin-top: 34mm;
+    transform: rotate(180deg);
+}
+#f4 {
+    margin-top: 33mm;
+    margin-left: 56mm;
+    transform: rotate(45deg);
+}
+#l5 {
+    width: 19mm;
+    margin-left: 26mm;
+    margin-top: 20mm;
+    transform: rotate(130deg);
+}
+#f5 {
+    margin-top: 54mm;
+    margin-left: 80mm;
+    transform: rotate(135deg);
+}
+#l6 {
+    width: 140mm;
+    margin-left: -77mm;
+    margin-top: 101mm;
+    transform: rotate(116deg);
+}
+#f6 {
+    margin-top: 161mm;
+    margin-left: -39mm;
+    transform: rotate(168deg);
+}
+#l7 {
+    width: 61mm;
+    margin-left: -131mm;
+    margin-top: 67mm;
+    transform: rotate(119deg);
+}
+#f7 {
+    margin-top: 91mm;
+    margin-left: -80mm;
+    transform: rotate(181deg);
+}
+#l8 {
+    width: 27mm;
+    margin-left: -109mm;
+    margin-top: 83mm;
+    transform: rotate(237deg);
+}
+#f8 {
+    margin-top: 91mm;
+    margin-left: -91mm;
+    transform: rotate(102deg);
+}
+#l9 {
+    width: 24mm;
+    margin-left: -37mm;
+    margin-top: -35mm;
+    transform: rotate(180deg);
+}
+#f9 {
+    margin-top: -36mm;
+    margin-left: -17mm;
+    transform: rotate(45deg);
+}
+#l10 {
+    width: 24mm;
+    margin-left: -33mm;
+    margin-top: 37mm;
+    transform: rotate(180deg);
+}
+#f10 {
+    margin-top: 36mm;
+    margin-left: -33mm;
+    transform: rotate(226deg);
+}
+#l11 {
+    width: 24mm;
+    margin-left: -33mm;
+    margin-top: 31mm;
+    transform: rotate(180deg);
+}
+#f11 {
+    margin-top: 29mm;
+    margin-left: -33mm;
+    transform: rotate(226deg);
+}
+#l12 {
+    width: 56mm;
+    margin-left: -37mm;
+    margin-top: -1mm;
+    transform: rotate(90deg);
+}
+#f12 {
+    margin-top: 24mm;
+    margin-left: -11mm;
+    transform: rotate(139deg);
+}
+#l13 {
+    width: 54mm;
+    margin-left: -35mm;
+    margin-top: -2mm;
+    transform: rotate(90deg);
+}
+#f13 {
+    margin-top: 21mm;
+    margin-left: -10mm;
+    transform: rotate(135deg);
+}
+#l14 {
+    width: 31mm;
+    margin-left: -70mm;
+    margin-top: -68mm;
+    transform: rotate(180deg);
+}
+#f14 {
+    margin-top: -69mm;
+    margin-left: -43mm;
+    transform: rotate(45deg);
+}
+#l15{
+    width: 45mm;
+    margin-left: -14mm;
+    margin-top: 35mm;
+    transform: rotate(90deg);
+}
+#l16{
+    width: 42mm;
+    margin-left: -33mm;
+    margin-top: 13mm;
+}
+.letra {
+    position: absolute;
+    font-size: 6mm;
+}
+#let1 {
+    margin-top: -39mm;
+    margin-left: -2mm;
+}
+#let2 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let3 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let4 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let5 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let6 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let7 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let8 {
+    margin-top: -39mm;
+    transform: rotate(180deg);
+}
+#let9 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let10 {
+    margin-top: -38mm;
+    transform: rotate(180deg);
+}
+#let11 {
+    margin-top: -32mm;
+    transform: rotate(180deg);
+}
+#let12 {
+    margin-top: -38mm;
+    transform: rotate(270deg);
+}
+#let13 {
+    margin-top: -33mm;
+    transform: rotate(270deg);
+}
+#insercion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    background-color: #ffffff;
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+}
+
+#evaluador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10mm;
+}
+
+input[type="text"], button[type="submit"] {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+  
+input[type="text"] {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"] {
+    background-color: #1c7cd6;
+    color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: 0.2s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #10549f;
+}
+
+ul{
+    margin-top: 2rem;
+    padding-left: 2rem;
+    list-style-type: none;
+    text-align: center;
+}
+  
+li{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    margin-top: 1.5rem;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+  
+th{
+    background-color: #f2f2f2;
+    color: #444;
+}
+  
