@@ -9,7 +9,7 @@ from .models import Historial
 
 @csrf_exempt
 def grafo(request):
-    docExterno=open("C:/Users/Luisc/OneDrive/Documentos/Semestre 2023-2/Compliadores/Automata-finito/automataFinito/vista/static/grafo.html")
+    docExterno=open("C:/Users/lgniw/OneDrive/Documents/GitHub/Automata-finito/automataFinito/vista/static/grafo.html")
     plt=Template(docExterno.read())
     docExterno.close()
     ctx=Context()
@@ -31,14 +31,14 @@ def construirAutomata(request):
             'q4': {'b': {'q5'}},
             'q5': {'b': {'q6'}, 'a':{'q13'}},
             'q6': {'a': {'q7'}},
-            'q7': {'b': {'q8'}, 'b':{'q15'}},
-            'q8': {'b': {'q9'}},
+            'q7': {'b': {'q8'}},
+            'q8': {'b': {'q9'}, 'a':{'q15'}}, 
             'q9': {'a': {'q10'}},
             'q10':{},
             'q11': {'b': {'q12'}},
             'q12': {'a': {'q13'}, 'b':{'q6'}},
             'q13': {'b': {'q14'}},
-            'q14': {'a': {'q15'}, 'a':{'q9'}},
+            'q14': {'a': {'q15'}, 'b':{'q9'}},
             'q15':{},
         },
         initial_state='q0',
@@ -55,7 +55,7 @@ def construirAutomata(request):
             resultado='no ha ingresado ninguna palabra'
 
     Historial(palabrasIngresadas=palabra, estadoDelaPalabra=resultado).save()
-    docExterno=open("C:/Users/Luisc/OneDrive/Documentos/Semestre 2023-2/Compliadores/Automata-finito/automataFinito/vista/static/grafo.html")
+    docExterno=open("C:/Users/lgniw/OneDrive/Documents/GitHub/Automata-finito/automataFinito/vista/static/grafo.html")
     plt=Template(docExterno.read())
     docExterno.close()
     ctx=Context({'resultado': resultado, 'palabra': palabra, 'nfa': nfa})
@@ -65,7 +65,7 @@ def construirAutomata(request):
 @csrf_exempt
 def historial(request):
     historial_palabras = Historial.objects.all()
-    docExterno=open("C:/Users/Luisc/OneDrive/Documentos/Semestre 2023-2/Compliadores/Automata-finito/automataFinito/vista/static")
+    docExterno=open("C:/Users/lgniw/OneDrive/Documents/GitHub/Automata-finito/automataFinito/vista/static/grafo.html")
     plt=Template(docExterno.read())
     docExterno.close()
     ctx=Context({'historial':historial_palabras})
