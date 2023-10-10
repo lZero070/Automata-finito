@@ -20,7 +20,7 @@ function historialEspacio(){
 }
 function interfazIdioma(){
     let idiomaSel=document.getElementById("lenguaje").value;
-    let palabrasAceptadas=new Array("aaaaaa","aaaaab","aaab","aabaaa","aabaab","aabb","baaa","baab","bb");
+    let palabrasAceptadas=new Array('a', 'abba', 'aba', 'abbabba', 'abbaba', 'ababba', 'ababa', 'abbabbabba', 'abbabbaba', 'abbababba', 'abbababa', 'ababbabba', 'ababbaba', 'abababba' ,'abababa');
     let cadenaCompleta=null;
     let primeraParte=null;
     let segundaParte=null;
