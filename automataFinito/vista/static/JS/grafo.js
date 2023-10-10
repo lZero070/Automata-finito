@@ -111,7 +111,7 @@ function cambiarIdiomaEstadoHistorial(parteNueva1,parteNueva2,palabraNula,parteN
     let cadenaCompleta=null;
     let primeraParte=null;
     let segundaParte=null;
-    let palabrasAceptadas=new Array("aaaaaa","aaaaab","aaab","aabaaa","aabaab","aabb","baaa","baab","bb");
+    let palabrasAceptadas=new Array('a', 'abba', 'aba', 'abbabba', 'abbaba', 'ababba', 'ababa', 'abbabbabba', 'abbabbaba', 'abbababba', 'abbababa', 'ababbabba', 'ababbaba', 'abababba' ,'abababa');
     for (let i=0; i<historialEstado.length; i++){
         cadenaCompleta=historialEstado[i].innerText;        
         if (cadenaCompleta.indexOf('"')==-1) {
@@ -153,10 +153,10 @@ function validarPalabra(cadenaCompleta,palabrasAceptadas) {
 function reemplazarCadena(cadenaVieja, cadenaNueva, cadenaCompleta) {
     // Reemplaza cadenaVieja por cadenaNueva en cadenaCompleta
     
-       for (let i = 0; i < cadenaCompleta.length; i++) {
-          if (cadenaCompleta.substring(i, i + cadenaVieja.length) == cadenaVieja) {
-             cadenaCompleta= cadenaCompleta.substring(0, i) + cadenaNueva + cadenaCompleta.substring(i + cadenaVieja.length, cadenaCompleta.length);
-          }
-       }
-       return cadenaCompleta;
+    for (let i = 0; i < cadenaCompleta.length; i++) {
+        if (cadenaCompleta.substring(i, i + cadenaVieja.length) == cadenaVieja) {
+            cadenaCompleta= cadenaCompleta.substring(0, i) + cadenaNueva + cadenaCompleta.substring(i + cadenaVieja.length, cadenaCompleta.length);
+        }
+    }
+    return cadenaCompleta;
     }
