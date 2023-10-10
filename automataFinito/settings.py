@@ -131,7 +131,7 @@ LOCALE_PATHS = (
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'C:/Users/lgniw/OneDrive/Desktop/Compiladores2023/automataFinito-main/automataFinito(Actualizacion01)/automataFinito/vista/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'C:/Users/Luisc/OneDrive/Documentos/Semestre 2023-2/Compliadores/Automata-finito/automataFinito/vista/static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
