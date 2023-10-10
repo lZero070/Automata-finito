@@ -177,7 +177,7 @@ function correrComandos(estado,linea,flecha,aceptacion){
 function obtenerPalabraValida(cadenaCompleta) {
     let palabraIndiceInicial=cadenaCompleta.indexOf('"');
     let palabra=null;
-    let palabrasAceptadas=new Array("aaaaaa","aaaaab","aaab","aabaaa","aabaab","aabb","baaa","baab","bb");
+    let palabrasAceptadas=new Array('a', 'abba', 'aba', 'abbabba', 'abbaba', 'ababba', 'ababa', 'abbabbabba', 'abbabbaba', 'abbababba', 'abbababa', 'ababbabba', 'ababbaba', 'abababba' ,'abababa');
     for (let i = cadenaCompleta.length; i>=0; i--) {
         if (cadenaCompleta[i]=='"') {
             palabra=cadenaCompleta.substring(palabraIndiceInicial+1,i);
