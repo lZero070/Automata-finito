@@ -20,7 +20,7 @@ function historialEspacio(){
 }
 function interfazIdioma(){
     let idiomaSel=document.getElementById("lenguaje").value;
-    let palabrasAceptadas=new Array('a', 'abba', 'aba', 'abbabba', 'abbaba', 'ababba', 'ababa', 'abbabbabba', 'abbabbaba', 'abbababba', 'abbababa', 'ababbabba', 'ababbaba', 'abababba' ,'abababa');
+    let palabrasAceptadas=new Array("a", "abba", "aba", "abbabba", "abbaba", "ababba", "ababa", "abbabbabba", "abbabbaba", "abbababba", "abbababa", "ababbabba", "ababbaba", "abababba", "abababa");
     let cadenaCompleta=null;
     let primeraParte=null;
     let segundaParte=null;
@@ -111,7 +111,7 @@ function cambiarIdiomaEstadoHistorial(parteNueva1,parteNueva2,palabraNula,parteN
     let cadenaCompleta=null;
     let primeraParte=null;
     let segundaParte=null;
-    let palabrasAceptadas=new Array('a', 'abba', 'aba', 'abbabba', 'abbaba', 'ababba', 'ababa', 'abbabbabba', 'abbabbaba', 'abbababba', 'abbababa', 'ababbabba', 'ababbaba', 'abababba' ,'abababa');
+    let palabrasAceptadas=new Array("a", "abba", "aba", "abbabba", "abbaba", "ababba", "ababa", "abbabbabba", "abbabbaba", "abbababba", "abbababa", "ababbabba", "ababbaba", "abababba", "abababa");
     for (let i=0; i<historialEstado.length; i++){
         cadenaCompleta=historialEstado[i].innerText;        
         if (cadenaCompleta.indexOf('"')==-1) {
