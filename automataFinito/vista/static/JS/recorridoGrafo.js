@@ -73,6 +73,17 @@ class invocadora{
         this.comando.ejecutar();
     }
 }
+// Agregar un event listener para el slider
+document.getElementById("velocidadSlider").addEventListener("input", function() {
+    // Obtener el valor actual del slider
+    let velocidad = parseInt(this.value);
+
+    // Actualizar el valor de velocidad en el párrafo
+    document.getElementById("velocidadValor").textContent = velocidad + "x";
+
+    // Llama a la función de animación con la velocidad deseada
+    encenderGrafo(velocidad);
+});
 function encenderGrafo(velocidad){
     if(document.getElementById("mensajeAutomata")!=null){
         let cadenaCompleta=document.getElementById("mensajeAutomata").innerText;
@@ -148,7 +159,7 @@ function encenderGrafo(velocidad){
                     return null;
                 }
             }
-            let duracion = 1000 / velocidad;
+            let duracion = 1000 / velocidad ;
 
 
         }
@@ -157,17 +168,6 @@ function encenderGrafo(velocidad){
 
     }
 }
-// Agregar un event listener para el slider
-document.getElementById("velocidadSlider").addEventListener("input", function() {
-    // Obtener el valor actual del slider
-    let velocidad = parseInt(this.value);
-
-    // Actualizar el valor de velocidad en el párrafo
-    document.getElementById("velocidadValor").textContent = velocidad + "x";
-
-    // Llama a la función de animación con la velocidad deseada
-    encenderGrafo(velocidad);
-});
 function correrComandos(estado,linea,flecha,aceptacion){
     let comando=null
     if(linea!=""){
