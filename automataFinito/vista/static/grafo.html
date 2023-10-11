@@ -88,6 +88,10 @@
                 {% csrf_token %}
                 <input type="text" name="palabra" id="palabra" placeholder="Ingrese una palabra...">
                 <button id="validacion" type="submit" onclick="interfazIdioma()">Evaluar</button>
+                <label for="velocidadSlider">Velocidad de la animacion:</label>
+                <input type="range" min="1" max="5" value="1" class="slider" id="velocidadSlider">
+                <p id="velocidadValor">1x</p>
+
             </form>
             {% if resultado %}
                 <ul>
